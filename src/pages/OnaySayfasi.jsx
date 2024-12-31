@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function OnaySayfasi() {
+function OnaySayfasi({ userChoices }) {
   return (
-    <div>OnaySayfasi</div>
-  )
+    <div>
+      <h1>Sipariş Onayı</h1>
+      <p>Boyut: {userChoices.size}</p>
+      <p>Malzemeler: {userChoices.toppings?.join(", ")}</p>
+      <p>Not: {userChoices.note}</p>
+      <p>Siparişiniz alınmıştır!</p>
+    </div>
+  );
 }
 
-export default OnaySayfasi
+export default OnaySayfasi;

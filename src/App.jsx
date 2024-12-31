@@ -5,7 +5,6 @@ import OnaySayfasi from "./pages/OnaySayfasi";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 
-
 function App() {
   const [userChoices, setUserChoices] = useState({});
 
@@ -16,10 +15,10 @@ function App() {
         <Route exact path="/">
           <AnaSayfa />
         </Route>
-        <Route path="/siparis-ozeti">
+        <Route path="/siparis">
           <SiparisSayfasi userChoices={userChoices} setUserChoices={setUserChoices} />
         </Route>
-        <Route path="/onay-sayfasi">
+        <Route path="/onay">
           <OnaySayfasi userChoices={userChoices} />
         </Route>
       </Switch>
@@ -28,3 +27,4 @@ function App() {
 }
 
 export default App;
+

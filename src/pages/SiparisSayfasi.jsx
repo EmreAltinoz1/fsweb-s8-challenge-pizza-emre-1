@@ -1,81 +1,52 @@
-import React, { useState } from 'react';
-import '../css/SiparisSayfasi.css'; 
+import React, { useState } from "react";
+import "../css/SiparisSayfasi.css";
 
-function SiparisSayfasi() {
-  const [secimler, setSecimler] = useState([]);
-  const [toplam, setToplam] = useState(85.50); 
+function SiparisSayfasi({ userChoices, setUserChoices }) {
+  const [size, setSize] = useState("");
+  const [toppings, setToppings] = useState([]);
+  const [note, setNote] = useState("");
 
-  const handleMalzemeSecimi = (event) => {
-    const malzeme = event.target.name;
-    const fiyat = 5; 
-    if (event.target.checked) {
-      setSecimler([...secimler, malzeme]);
-      setToplam(toplam + fiyat);
+  const handleToppingChange = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setToppings([...toppings, value]);
     } else {
-      setSecimler(secimler.filter((item) => item !== malzeme));
-      setToplam(toplam - fiyat);
+      setToppings(toppings.filter((topping) => topping !== value));
     }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setUserChoices({ size, toppings, note });
   };
 
   return (
     <div className="siparis-container">
-      <header className="header">
-        <h1>Teknolojik Yemekler</h1>
-        <nav>
-          <span>Anasayfa &gt; Seçenekler &gt; Sipariş Sayfası</span>
-        </nav>
-      </header>
-      <main>
-        <section className="pizza-detay">
-          <h2>Position Absolute Acı Pizza</h2>
-          <p>85.50₺</p>
-          <p>
-            Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre.
-          </p>
-        </section>
-
-        <section className="secimler">
-          <h3>Boyut Seç *</h3>
-          <label>
-            <input type="radio" name="boyut" /> Küçük
-          </label>
-          <label>
-            <input type="radio" name="boyut" /> Orta
-          </label>
-          <label>
-            <input type="radio" name="boyut" /> Büyük
-          </label>
-        </section>
-
-        <section className="secimler">
-          <h3>Hamur Seç *</h3>
-          <select>
-            <option value="ince">İnce Hamur</option>
-            <option value="kalin">Kalın Hamur</option>
+      <h1>Sipariş Ver</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Boyut Seç:</label>
+          <select value={size} onChange={(e) => setSize(e.target.value)}>
+            <option value="">Seçiniz</option>
+            <option value="Küçük">Küçük</option>
+            <option value="Orta">Orta</option>
+            <option value="Büyük">Büyük</option>
           </select>
-        </section>
-
-        <section className="secimler">
-          <h3>Ek Malzemeler</h3>
-          <p>En fazla 10 malzeme seçebilirsiniz. Her biri 5₺</p>
-          <label>
-            <input type="checkbox" name="Pepperoni" onChange={handleMalzemeSecimi} /> Pepperoni
-          </label>
-          <label>
-            <input type="checkbox" name="Sucuk" onChange={handleMalzemeSecimi} /> Sucuk
-          </label>
-          <label>
-            <input type="checkbox" name="Mısır" onChange={handleMalzemeSecimi} /> Mısır
-          </label>
-        </section>
-
-        <section className="siparis-ozeti">
-          <h3>Sipariş Özeti</h3>
-          <p>Seçilen Malzemeler: {secimler.join(', ')}</p>
-          <p>Toplam Tutar: {toplam.toFixed(2)}₺</p>
-          <button className="siparis-ver">Sipariş Ver</button>
-        </section>
-      </main>
+        </div>
+        <div>
+          <label>Malzemeler:</label>
+          <div>
+            <input type="checkbox" value="Peynir" onChange={handleToppingChange} /> Peynir
+            <input type="checkbox" value="Mantar" onChange={handleToppingChange} /> Mantar
+            <input type="checkbox" value="Zeytin" onChange={handleToppingChange} /> Zeytin
+          </div>
+        </div>
+        <div>
+          <label>Not:</label>
+          <textarea value={note} onChange={(e) => setNote(e.target.value)}></textarea>
+        </div>
+        <button type="submit">Sipariş Ver</button>
+      </form>
     </div>
   );
 }
