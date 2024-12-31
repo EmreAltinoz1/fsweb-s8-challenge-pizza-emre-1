@@ -1,0 +1,32 @@
+nav {
+    display: flex;
+    justify-content: center; /* Ortalar */
+    align-items: center; /* Dikeyde ortalar */
+    background-color: #f8f9fa; /* Hafif bir arka plan rengi */
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd; /* Alt çizgi */
+  }
+  
+  ul {
+    list-style: none; /* Madde işaretlerini kaldırır */
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 15px; /* Yatay boşluk */
+  }
+  
+  a {
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: #007bff; /* Link rengi */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s; /* Renk geçiş efekti */
+  }
+  
+  a:hover {
+    color: #0056b3; /* Üzerine gelindiğinde koyu mavi */
+  }
+  

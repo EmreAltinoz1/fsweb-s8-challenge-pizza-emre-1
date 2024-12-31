@@ -1,0 +1,34 @@
+.siparis-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header h1 {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .secimler, .siparis-ozeti {
+    margin: 20px 0;
+  }
+  
+  button.siparis-ver {
+    background-color: #ffa500;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button.siparis-ver:hover {
+    background-color: #ff7300;
+  }
+  
