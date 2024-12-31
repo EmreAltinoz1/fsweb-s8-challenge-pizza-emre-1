@@ -1,32 +1,32 @@
 nav {
     display: flex;
-    justify-content: center; /* Ortalar */
-    align-items: center; /* Dikeyde ortalar */
-    background-color: #f8f9fa; /* Hafif bir arka plan rengi */
+    justify-content: center; 
+    align-items: center; 
+    background-color: #f8f9fa; 
     padding: 10px 20px;
-    border-bottom: 2px solid #ddd; /* Alt çizgi */
+    border-bottom: 2px solid #ddd; 
   }
   
   ul {
-    list-style: none; /* Madde işaretlerini kaldırır */
+    list-style: none; 
     display: flex;
     margin: 0;
     padding: 0;
   }
   
   li {
-    margin: 0 15px; /* Yatay boşluk */
+    margin: 0 15px; 
   }
   
   a {
-    text-decoration: none; /* Alt çizgiyi kaldırır */
-    color: #007bff; /* Link rengi */
+    text-decoration: none; 
+    color: #007bff; 
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s; /* Renk geçiş efekti */
+    transition: color 0.3s; 
   }
   
   a:hover {
-    color: #0056b3; /* Üzerine gelindiğinde koyu mavi */
+    color: #0056b3; 
   }
   

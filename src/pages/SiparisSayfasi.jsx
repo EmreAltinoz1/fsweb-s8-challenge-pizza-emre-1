@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import '../css/SiparisSayfasi.css'; // Stil dosyasını ekleyin.
+import '../css/SiparisSayfasi.css'; 
 
 function SiparisSayfasi() {
   const [secimler, setSecimler] = useState([]);
-  const [toplam, setToplam] = useState(85.50); // Varsayılan başlangıç fiyatı.
+  const [toplam, setToplam] = useState(85.50); 
 
-  // Malzeme seçimi için bir fonksiyon
   const handleMalzemeSecimi = (event) => {
     const malzeme = event.target.name;
-    const fiyat = 5; // Her bir malzemenin fiyatı 5 TL olarak ayarlandı.
+    const fiyat = 5; 
     if (event.target.checked) {
       setSecimler([...secimler, malzeme]);
       setToplam(toplam + fiyat);
@@ -35,7 +34,6 @@ function SiparisSayfasi() {
           </p>
         </section>
 
-        {/* Boyut Seçimi */}
         <section className="secimler">
           <h3>Boyut Seç *</h3>
           <label>
@@ -49,7 +47,6 @@ function SiparisSayfasi() {
           </label>
         </section>
 
-        {/* Hamur Seçimi */}
         <section className="secimler">
           <h3>Hamur Seç *</h3>
           <select>
@@ -58,7 +55,6 @@ function SiparisSayfasi() {
           </select>
         </section>
 
-        {/* Ek Malzemeler */}
         <section className="secimler">
           <h3>Ek Malzemeler</h3>
           <p>En fazla 10 malzeme seçebilirsiniz. Her biri 5₺</p>
@@ -73,7 +69,6 @@ function SiparisSayfasi() {
           </label>
         </section>
 
-        {/* Sipariş Özeti */}
         <section className="siparis-ozeti">
           <h3>Sipariş Özeti</h3>
           <p>Seçilen Malzemeler: {secimler.join(', ')}</p>
