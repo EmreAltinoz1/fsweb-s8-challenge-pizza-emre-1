@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AnaSayfa from "./pages/AnaSayfa";
 import SiparisSayfasi from "./pages/SiparisSayfasi";
 import OnaySayfasi from "./pages/OnaySayfasi";
-import Navbar from "./components/Navbar";
 import { useState } from "react";
 
 function App() {
@@ -10,7 +9,6 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path="/">
           <AnaSayfa />

@@ -1,13 +1,10 @@
 import React from "react";
-
-function OnaySayfasi({ userChoices }) {
+import "../css/OnaySayfasi.css";
+function OnaySayfasi() {
   return (
-    <div>
-      <h1>Sipariş Onayı</h1>
-      <p>Boyut: {userChoices.size}</p>
-      <p>Malzemeler: {userChoices.toppings?.join(", ")}</p>
-      <p>Not: {userChoices.note}</p>
-      <p>Siparişiniz alınmıştır!</p>
+    <div className="onay-container">
+      <h1 className="onay-baslik">Teknolojik Yemekler</h1>
+      <p className="onay-mesaj">TEBRİKLER!<br />SİPARİŞİNİZ ALINDI!</p>
     </div>
   );
 }

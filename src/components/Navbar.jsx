@@ -15,8 +15,8 @@ function Navbar() {
         <nav>
           <ul>
             <li><Link to="/">Anasayfa</Link></li>
-            <li><Link to="/siparis">Sipariş Sayfası</Link></li>
-            <li><Link to="/onay">OnaySayfasi</Link></li>
+            <li><Link to="/siparis">Seçenekler</Link></li>
+            <li><Link to="/onay">Sipariş Oluştur</Link></li>
           </ul>
         </nav>
     );
