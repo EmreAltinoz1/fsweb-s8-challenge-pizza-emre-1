@@ -1,49 +1,937 @@
-.anasayfa-container {
-  background-color: #d32f2f;
-  background-image: url('../../images/iteration-1-images/home-banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
+
+.card-favori-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+.card-item {
+  width: 30%;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-item:hover {
+  transform: translateY(-10px);
+}
+
+.card-item-img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card-item-title {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #292929;
+}
+
+.card-item-rating {
+  font-size: 1rem;
+  color: #ce2829;
+}
+
+.card-item-pricing {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-item-reviews {
+  font-size: 1rem;
+  color: #5f5f5f;
+}
+
+.card-item-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #292929;
+}
+
+.yönlendirme {
+  display: flex;
+  gap: 1rem;
+  color: #ffffffe8;
+  padding: 1rem;
+  justify-content: center;
+  padding-right: 390px;
+}
+
+.siparis-toplami {
+ 
+  color: #fff; /* Beyaz yazı rengi */
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #FAF7F2;
+  text-align: center;
+  width: 350px;
+  height: 197px; /* Genişlik (isteğe göre ayarlayın) */
+  margin: 0 auto; /* Sayfada ortalamak için */
+}
+
+.siparis-toplami h3 {
+  padding: 0;
+  display: flex;
+  margin-bottom: 40px;
+
+}
+
+/* .sa {
+  color: rgb(48, 127, 191);
+} */
+@media (max-width: 768px) {
+  .card-favori-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .card-item {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card-item-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-item-title {
+    font-size: 1.1rem;
+  }
+
+  .card-item-price {
+    font-size: 1rem;
+  }
+
+  .card-item-rating,
+  .card-item-reviews {
+    font-size: 0.9rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+
+.entry-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+.entry-content img {
+  max-width: 10%;
+}
+.pizza-sizes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 15%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.tree-left {
+  background-image: url("images/iteration-2-images/cta/kart-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1rem;
+  aspect-ratio: 1.5;
+}
+
+.right-card-one {
+  background-image: url("images/iteration-2-images/cta/kart-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  padding: 1rem;
+  padding-bottom: 7rem;
+  border-radius: 1rem;
+}
+
+.right-card-two {
+  background-image: url("images/iteration-2-images/cta/kart-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  padding-bottom: 7rem;
+  border-radius: 1rem;
+  background-position: 80%;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+ul {
+  
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  align-items:center ;
+  text-align: center;
+  gap: 2rem;
+}
+.ul1-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #292929;
+  
+}
+.ul1-container{
+
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.order-button {
+  border: none;
+  margin-top: 50px;
+  font-size:16px;
+}
+
+.ul1 {
+  background: white;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+}
+
+.ul2 li {
+  border: 1px solid white;
+  border-radius: 2.5rem;
+  background: white;
+  padding: 0rem 1rem;
+  justify-content: center;
+}
+#catchword {
+  font-size: 4rem;
   color: white;
+  line-height: 4rem; 
+  margin-top: 0;
+  font-weight: lighter;
+}
+
+#firsat {
+  margin-bottom: 5px;
+
+  font-family: "Satisfy";
+  color: #FDC913;
+  font-size: x-large;
+}
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 2/1;
+  background-image: url("images/iteration-1-images/home-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+.entry-content img {
+  max-width: 90%;
+  margin: 0 20%;
+}
+
+.giris-btn {
+  padding: 0.5rem 2.5rem;
+  border: 1px solid #fdc913;
+  border-radius: 3rem;
+  font-weight: bold;
+  font-size: large;
+  background: #fdc913;
+  line-height: 2rem;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-form-header {
+  background: #ce2829;
+  text-align: center;
+  padding-top: 2.5rem;
+  color: white;
+}
+.order-form-header img {
+  margin-bottom: 2rem;
+}
+.form-banner{
+  margin: 0 auto;
+  padding: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  
+  font-family: "Barlow";
+}
+
+.container1 {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center; /* Dikeyde ortalama */
+  padding: 10px 0; /* Yukarı-aşağı boşluk */
+}
+
+.content1 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  transform: translateX(-39px);
+  
+}
+
+ .money1 {
+ font-size: 1.2rem;
+ font-weight: bold;
+}
+
+.rating {
+display:flex ;
+margin-right: 15px;
+}
+.boyut-secimi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.boyut-secimi h3,
+.hamur-secme h3 {
+  margin-bottom: 0;
+  display: flex;
+  gap:3px;
+}
+
+h3 p {
+  color: red;
+}
+
+.hamur-secme {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ek-malzemeler {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  
+
+}
+
+
+button {
+  background: #fdc913;
+}
+
+#red {
+  color: #db2626;
+  font-weight: bold;
+}
+
+
+
+.error-mesaji {
+  color: rgb(155, 20, 20);
+  font-weight: bold;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0.3rem;
+  background: rgb(214, 209, 209);
+  padding-left: 0.5rem;
+  padding-bottom: 0.2rem;
+  margin-top: 1rem;
+}
+input[type="checkbox"] {
+  width: 50px;
+ background-color: #ff0000;
+  height: 40px;
+  accent-color: #fdc913; 
+  border-radius: 50%;
+  
+}
+
+
+
+
+
+.ul2 li:nth-child(2) {
+  background: #292929;
+  color: white;
+  border-color: #292929;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.tree {
+  display: flex;
+  gap: 1rem;
+  max-width: 50%;
+  color: white;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tree-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.menu-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pua {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ingredient-account{
+  float: right;
+}
+.menuler {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  
+}
+.menuler p {
+ margin-bottom: 20px;
+}
+.menuler h4 {
+  margin-bottom: 2rem;
+}
+
+.insta {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+
+}
+
+.insta-photos {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 350px;
+}
+.ek-malzemeler p {
+  color: #5f5f5f;
+}
+
+.ek-malzemeler h3 {
+  margin-bottom: 0.5rem;
+}
+
+.malzeme {
+  min-width: 170px;
+  
+}
+.malzeme value{
+ background-color: #292929;
+}
+#malzeme-text{
+  color: #ce2829;
+}
+.malzemos {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  margin-top: 1rem;
+  
+}
+
+.order-note {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+  
+
+}
+
+#order-note {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border-color: #5f5f5f;
+  background:white;
+}
+
+.hesap-butonlari {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.pieces-butonlari {
+  display: flex;
+  width: 50px;
+  align-items: center;
+}
+
+#ekle {
+  padding: 30% 50%;
+  border-right: 1px solid lightgray;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+#cikar {
+  padding: 30% 50%;
+  border-right: 1px solid lightgray;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+#piece {
+  padding: 30% 50%;
+  border: 1px solid lightgray;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.order-total-info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  gap: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 20px;
+  background-color:  #ffffff;
+  height: 220px;
+}
+.order-total {
+  border-radius: 0.3rem;
+ 
+  flex-direction: column;
+  flex: 0.5;
+  gap: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 30%;
+  border: 1px solid lightgray;
+  flex: 0.68;
+}
+.pua div {
+  display: flex;
+  gap: 2rem;
+}
+
+.xlarge-yazi {
+  font-size: xx-large;
+  margin: 0;
+  font-weight: bold;
+}
+
+.card-item-points p {
+  margin: 0;
+}
+
+.text1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.anasayfa-baslik {
-  
-  font-weight: bold;
+#encok {
+  font-family: "Satisfy", serif;
   margin: 0;
-  padding-top: 17rem;
-  font-size: 3rem;
+  font-size: x-large;
+  color: #ce2829;
 }
 
-.anasayfa-slogan {
-  font-size: 3.8rem; 
-  line-height: 4rem;
-  margin: 1rem 0;
-  
+.left-card h2 {
+  font-size: 2rem;
+  font-family: "Quattrocento";
 }
 
-.anasayfa-button {
-  background-color: #ffc107;
-  color: #000000;
-  font-size: 1.25rem;
+.tree button {
+  border-radius: 1.5rem;
+  background-color: aliceblue;
+  color: #ce2829;
+  padding: 0.5rem 1rem;
+}
+
+h4 span {
+  color: #ce2829;
+}
+
+.right-card-two {
+  color: black;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card h4 {
   font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: transform 0.2s;
 }
 
-.anasayfa-button:hover {
-  transform: scale(1.1);
+.footer-section {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  background: #292929;
+  padding: 2rem;
+  color: #faf7f2;
+  flex-wrap: wrap;
+}
+
+.icon-bolum {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 2rem;
+}
+
+.iconkey {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.malzeme_sipari_con{
+  width: 250px;
+
+}
+.submit-btn button{
+  background-color: #FDC913;
+ height:4rem ;
+  width: 100%;
+  color: #000;
+}
+
+.malzemeler-container{
+  background-color: #7a7a7a;
+  display: block;
+  width: 300px;
+  flex-wrap:wrap; /* Sığmayanların alt satıra geçmesini sağlar */
+  gap: 10px; /* Aralarına boşluk koyar */
+  content: " ,";
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.container-2 {
+  display: flex; /* Flexbox ile elemanları yan yana sıralar */
+  flex-direction: row; /* Yatay sıralama */
+  align-items: center; /* Dikey hizalama */
+  gap: 10px; /* Checkbox'lar arasında boşluk */
+}
+
+#in[type="radio"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+#in[type="radio"]:checked {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+.styled-checkbox{}
+#in[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+  
+
+.copyright {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  background: #292929;
+  border-top: 1px solid rgb(35, 128, 131);
+  padding: 0 1rem;
+  align-items: center;
+  color: white;
+}
+
+#siparis-alindi {
+  font-weight: 200;
+}
+
+
+.secim-harci {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+/* orderpage */
+
+.order-summary-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+  background: #CE2829;
+
+  color: white;
+  font-family: "Roboto Condensed";
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+  height: 100vh;
+  font-weight: lighter;
+}
+.sonuc-text {
+  border-bottom: 1px solid white;
+}
+.lezzet {
+  font-family: "Satisfy";
+  color: #fdc913;
+  font-size: x-large;
+  margin-bottom: 0;
+}
+#siparis-alindi {
+  font-weight: 200;
+  font-size: 4rem;
+}
+strong{
+  white-space: pre-wrap;
+}
+
+.malzemeler-container{
+  background-color: #ffffff;
+  display: block;
+  width: 300px;
+  flex-wrap:wrap; /* Sığmayanların alt satıra geçmesini sağlar */
+  gap: 10px; /* Aralarına boşluk koyar */
+  content: " ,";
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #000;
+}
+
+
+/* Container'ın tüm öğelerini esnek yapalım ve düzgün hizalayalım */
+.checkbox-wrapper-56 {
+  display: flex;
+  gap: 15px; /* Checkbox'lar arasındaki boşluk */
+  justify-content: flex-start; /* Yatayda hizalama */
+  align-items: center;
+}
+
+/* Container'daki tüm label'leri yatayda hizalayalım */
+.container-1 {
+  display: flex;
+  flex-direction: row; /* Checkbox'ları yatayda hizalayalım */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checkbox'ı gizleyelim ama stilini stilize edelim */
+.checkbox-wrapper-56 .container-1 input {
+  display: none; /* Input'u gizli tutuyoruz */
+}
+
+/* Checkmark kutusunun stilini belirleyelim */
+.checkbox-wrapper-56 .container-1 .checkmark {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #FAF7F2;
+  border-radius: 50%;
+  border: 8px solid #ececec;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Checkbox seçildiğinde checkmark stilini değiştirelim */
+.checkbox-wrapper-56 .container-1 input:checked + .checkmark {
+  background-color: #ffeecc;
+  border-color: #b4975d;
+}
+
+/* Seçili olduğunda işaret göster */
+.checkbox-wrapper-56 .container-1 input:checked + .checkmark::after {
+  content: "✓"; /* Seçili olduğunda işaret gösterme */
+  font-size: 20px;
+  color: #b4975d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Focus olduğunda kutuya gölge ekleyelim */
+.checkbox-wrapper-56 .container-1 input:focus + .checkmark {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1100px) {
+  
+  .left-card h2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  ul,
+  .text-container {
+    padding: 0 1rem;
+  }
+
+  li {
+    width: 30%;
+  }
+}
+@media (min-width: 1460px) {
+  .tree{
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+@media (max-width:1024px) {
+    .ul2{
+      width: 60%;
+      
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: .75rem;
+    }
+    .ul2 li {
+      height: 60px;
+    }
+}
+@media (max-width:962px) {
+  .ul1{
+    width: 100%;
+    
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1rem;
+  }
+  .ul1 li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+  }
+}
+@media (max-width: 666px) {
+  .footer-section {
+    justify-content: flex-start;
+  }
+  li
+  .giris-btn {
+    margin-bottom: 30rem;
+  }
+
+
+  .tree {
+    width: 80%;
+    max-width: none;
+  }
+
+  
+
 }

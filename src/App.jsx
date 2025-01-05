@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AnaSayfa from "./pages/AnaSayfa";
-import SiparisSayfasi from "./pages/SiparisSayfasi";
+import SiparisSayfasi from "./pages/SiparisFormu";
 import OnaySayfasi from "./pages/OnaySayfasi";
 import { useState } from "react";
+import "./css/SiparisSayfasi.css";
 
 function App() {
   const [userChoices, setUserChoices] = useState({});
